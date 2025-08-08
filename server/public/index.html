@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Multiplayer Racing</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="overlay">
+    <form id="joinForm">
+      <h1>Mini Multiplayer Racing</h1>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" maxlength="20" placeholder="Racer" />
+      <button type="submit">Join Race</button>
+      <p class="hint">Use arrow keys to drive. Avoid edges. Have fun!</p>
+    </form>
+  </div>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <span id="ping">-- ms</span>
+    <span id="players">Players: 0</span>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
